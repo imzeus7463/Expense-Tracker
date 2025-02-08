@@ -24,6 +24,7 @@ router.register(r'expenses', ExpenseViewSet, basename='expense')
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('api/', include(router.urls)),  # Include Expense API Routes
+    path('api/auth/', include('user_auth.urls')),  # Authentication API
+    path('api/expenses/', include('expenses.urls')),  # Expense API
 ]
 
