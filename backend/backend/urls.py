@@ -18,11 +18,13 @@ from django.contrib import admin
 from django.urls import path, include
 from rest_framework.routers import DefaultRouter
 from expenses.views import ExpenseViewSet
+from .views import home
 
 router = DefaultRouter()
 router.register(r'expenses', ExpenseViewSet, basename='expense')
 
 urlpatterns = [
+    path('', home, name='home'),  # Set homepage
     path('admin/', admin.site.urls),
     path('api/auth/', include('user_auth.urls')),  # Authentication API
     path('api/expenses/', include('expenses.urls')),  # Expense API
