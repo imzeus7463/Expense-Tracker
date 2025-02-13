@@ -1,0 +1,19 @@
+<nz-card>
+  <form nz-form>
+    <nz-form-item>
+      <nz-form-label [nzSpan]="5">Username</nz-form-label>
+      <nz-form-control [nzSpan]="12">
+        <input nz-input [(ngModel)]="username" name="username" />
+      </nz-form-control>
+    </nz-form-item>
+    <nz-form-item>
+      <nz-form-label [nzSpan]="5">Password</nz-form-label>
+      <nz-form-control [nzSpan]="12">
+        <input nz-input [(ngModel)]="password" name="password" type="password" />
+      </nz-form-control>
+    </nz-form-item>
+    <nz-form-item>
+      <button nz-button nzType="primary" (click)="login()">Login</button>
+    </nz-form-item>
+  </form>
+</nz-card>
